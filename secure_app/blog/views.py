@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DeleteView
+from .models import Post
 # Create your views here.
 # class for creating the home view
 class BlogView(ListView):
