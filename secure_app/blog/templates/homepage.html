@@ -1,1 +1,8 @@
-<h1>homepage</h1>
+<h1>Secure Blog</h1>
+<!-- for loop to loop through blog posts and print out indiviudally -->
+{% for post in object_list %}
+    {{ post.title}}
+    {{ post.blogger}}
+    {{ post.body}}
+<!-- ending the for loop -->
+{% endfor %}
