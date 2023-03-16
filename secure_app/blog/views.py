@@ -7,3 +7,8 @@ class BlogView(ListView):
     # calls the Post model 
     model = Post
     template_name = 'homepage.html'
+    
+
+class DetailsPost(DeleteView):
+    model = Post
+    template_name = 'blogpost.html'
