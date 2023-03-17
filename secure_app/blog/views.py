@@ -16,5 +16,5 @@ class DetailsPost(DeleteView):
 # class to add a blog post
 class AddBlog(CreateView):
     model = Post
-    template_name = 'add_blog'
+    template_name = 'add_blog.html'
     fields = '__all__'

@@ -8,5 +8,5 @@ urlpatterns = [
     # using class based views to view a blog post
     path('blog/<int:pk>', DetailsPost.as_view(), name="blogpost"),
     # add blog post view
-    path('add_post/', AddBlog.as_view(), name="add_blog"),
+    path('add_blog/', AddBlog.as_view(), name="add_blog"),
 ]
