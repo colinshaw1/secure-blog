@@ -1,7 +1,8 @@
 <h1>Secure Blog</h1>
 <!-- for loop to loop through blog posts and print out indiviudally -->
 {% for post in object_list %}
-    <a href="{% url 'blogpost' %}">{{ post.title}}</a>
+    <!-- links the post title to the view and bring the user to the post -->
+    <a href="{% url 'blogpost' post.pk %}">{{ post.title}}</a>
     {{ post.blogger}}
     {{ post.body}}
 <!-- ending the for loop -->
