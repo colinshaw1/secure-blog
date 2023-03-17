@@ -17,5 +17,6 @@ class DetailsPost(DeleteView):
 # class to add a blog post
 class AddBlog(CreateView):
     model = Post
+    # tell the app to use the post form
+    from_class = PostForm
     template_name = 'add_blog.html'
-    fields = ('title','slug', 'body')
