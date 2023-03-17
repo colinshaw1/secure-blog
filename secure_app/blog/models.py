@@ -5,7 +5,7 @@ from django.urls import reverse
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    slug = models.CharField(max_length=255, default="Secure Blog")
+    slug = models.CharField(max_length=255)
     blogger = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
     # defining delf string to return the 
