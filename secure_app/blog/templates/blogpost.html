@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+<!--  add embedded Django for what is rendered on each page of the blog -->
+{% block content %}
+
 <h1>{{ post.title }}</h1>
 <h2>Blog by: {{ post.blogger }}</h2>
 <hr>
@@ -7,3 +11,4 @@
 
 <br>
 <a href="{% url 'home' %}">Retrun to Homepage</a>
+{% endblock %}
