@@ -4,14 +4,15 @@
 
 
 <h1>Add a Blog Post</h1>
-
-<form method="POST">
-    <!-- cross site request forgery token. stops hackers stealing the form info -->
-    {% csrf_token%}
-    <!-- django form system to render a built in form -->
-    {{ form.as_p}}
-    <button class="btn btn-primary">Post</button>
-</form>
+<div class="form_group">
+    <form method="POST">
+        <!-- cross site request forgery token. stops hackers stealing the form info -->
+        {% csrf_token%}
+        <!-- django form system to render a built in form -->
+        {{ form.as_p}}
+        <button class="btn btn-primary">Post</button>
+    </form>
+</div>
 <br>
 <a href="{% url 'home' %}" class="btn btn-primary">Retrun to Homepage</a>
 {% endblock %}
