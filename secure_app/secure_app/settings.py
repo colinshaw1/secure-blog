@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", cast=bool)
 
-ALLOWED_HOSTS = ['https://8000-colinshaw1-secureblog-juvmc7xj1cf.ws-eu93.gitpod.io/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
