@@ -12,7 +12,8 @@
     {{ post.title}}</a>
     {{ post.blogger}}  
     {{ post.body}}
-    <a href="{% url 'edit' post.pk %}" class="btn btn-secondary">Edit Post</a></li>
+    <a href="{% url 'edit' post.pk %}" class="btn btn-secondary">Edit Post</a>
+    <a href="{% url 'delete' post.pk %}" class="btn btn-secondary">Delete Post</a></li>
 </ul>
 <!-- ending the for loop -->
 {% endfor %}
