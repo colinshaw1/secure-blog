@@ -2,6 +2,7 @@
 <!--  add embedded Django for what is rendered on each page of the blog -->
 {% block content %}
 
+{% if user.is_authenticated %}
 
 <h1>Delete Blog Post</h1>
 <br>
@@ -18,5 +19,8 @@
     </form>
 </div>
 <br>
+{% else %}
+<h1>You need to register for an account to delete posts</h1>
+{% endif %}
 <a href="{% url 'home' %}" class="btn btn-primary">Retrun to Homepage</a>
 {% endblock %}
