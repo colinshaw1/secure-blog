@@ -13,6 +13,4 @@ urlpatterns = [
     path('blog/edit/<int:pk>', EditBlog.as_view(), name="edit"),
     # add delete post url
     path('blog/<int:pk>/delete', DeletePost.as_view(), name="delete"),
-    # add like post url
-    path('like/<int:pk>', LikePost, name="like"),
 ]
