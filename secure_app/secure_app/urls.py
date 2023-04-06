@@ -5,6 +5,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #  new path for home page
     path('', include('blog.urls')),
-    # add profiles url
+    # add profiles url for authentication
     path('profiles/', include('django.contrib.auth.urls')),
+    path('', include('profiles.urls')),
 ]
