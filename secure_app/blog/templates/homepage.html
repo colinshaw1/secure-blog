@@ -4,6 +4,7 @@
 
 
 <h1>Secure Blog</h1>
+<br>
 <!-- for loop to loop through blog posts and print out indiviudally -->
 {% for post in object_list %}
 <ul>
@@ -13,11 +14,14 @@
     {{ post.blogger}}  -
     {{ post.created_on }} 
     <br><br>
-    <p>{{ post.body}}</p>
+    <p>{{ post.body|slice:":100"}}</p>
     <br>
     {% if user.is_authenticated %}
-        <a href="{% url 'edit' post.pk %}" class="btn btn-secondary">Edit Post</a>
-        <a href="{% url 'delete' post.pk %}" class="btn btn-secondary">Delete Post</a></li>
+        <!-- only the blogger who created a page can edit a post -->
+        {% if user.id == post.blogger.id %}
+            <a href="{% url 'edit' post.pk %}" class="btn btn-secondary">Edit Post</a>
+            <a href="{% url 'delete' post.pk %}" class="btn btn-secondary">Delete Post</a></li>
+        {% endif %}
     {% endif %}
     <hr>
 </ul>
