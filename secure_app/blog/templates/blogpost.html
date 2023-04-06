@@ -23,7 +23,9 @@ Blog by: {{ post.blogger }} -
 <h2>Comments</h2>
 {% if not post.comment.all %}
     No comments left yet!!
+    <a href="" class="btn btn-primary">Add a Comment</a>
 {% else %}
+<a href="" class="btn btn-primary">Add a Comment</a>
     {% for comment in post.comment.all %}
         {{ comments.name }} - 
         {{ comments.created_on }}
