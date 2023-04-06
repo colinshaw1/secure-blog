@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DeleteView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .forms import PostForm
+from django.urls import reverse_lazy
 # Create your views here.
 # class for creating the home view
 class BlogView(ListView):
@@ -33,3 +34,5 @@ class EditBlog(UpdateView):
 class DeletePost(DeleteView):
     model = Post
     template_name = 'delete.html'
+    # add success url for when a post is deleted we are redirected to the homepage
+    success_url = reverse_lazy('home')
