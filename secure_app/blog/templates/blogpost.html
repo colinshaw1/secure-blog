@@ -20,7 +20,18 @@ Blog by: {{ post.blogger }} -
     {% endif %}
 {% endif %}
 <br><hr>
-
+<h2>Comments</h2>
+{% if not post.comment.all %}
+    No comments left yet!!
+{% else %}
+    {% for comment in post.comment.all %}
+        {{ comments.name }} - 
+        {{ comments.created_on }}
+        <br>
+        {{comments.body }}
+    {% endfor %}
+{% endif %}
+<hr>
 <br>
 <a href="{% url 'home' %}" class="btn btn-primary">Retrun to Homepage</a>
 {% endblock %}
