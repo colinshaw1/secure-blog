@@ -7,6 +7,8 @@ urlpatterns = [
     path('', BlogView.as_view(), name="home"),
     # using class based views to view a blog post
     path('blog/<int:pk>', DetailsPost.as_view(), name="blogpost"),
-    # add blog post view
+    # add blog post url
     path('add_blog/', AddBlog.as_view(), name="add_blog"),
+    # add edit blog url
+    path('blog/edit/<int:pk>', UpdateView.as_view(), name="edit")
 ]
