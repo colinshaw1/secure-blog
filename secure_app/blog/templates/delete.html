@@ -4,13 +4,15 @@
 
 
 <h1>Delete Blog Post</h1>
+<br>
+<h2>Delete: {{ post.title }}</h2>
 <div class="form_group">
     <form method="POST">
         <!-- cross site request forgery token. stops hackers stealing the form info -->
         {% csrf_token%}
         <!-- django form system to render a built in form -->
-        {{ form.as_p}}
-        <button class="btn btn-primary">Edit blog post</button>
+       
+        <button class="btn btn-danger">Delete blog post</button>
     </form>
 </div>
 <br>

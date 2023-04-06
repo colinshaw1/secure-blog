@@ -1,6 +1,6 @@
 from django.urls import path
 # from . import views
-from .views import BlogView, DetailsPost, AddBlog, EditBlog
+from .views import BlogView, DetailsPost, AddBlog, EditBlog, DeletePost
 
 urlpatterns = [
     # using class based views for homepage
@@ -11,4 +11,6 @@ urlpatterns = [
     path('add_blog/', AddBlog.as_view(), name="add_blog"),
     # add edit blog url
     path('blog/edit/<int:pk>', EditBlog.as_view(), name="edit"),
+    # add delete post url
+    path('blog/<int:pk>/delete', DeletePost.as_view(), name="delete"),
 ]
