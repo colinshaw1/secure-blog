@@ -4,7 +4,8 @@
 {% block content %}
 
 <h1>{{ post.title }}</h1>
-<h2>Blog by: {{ post.blogger }}</h2>
+Blog by: {{ post.blogger }} -
+{{ post.created_on }} 
 <hr>
 <br>
 <p>{{ post.body }}</p>

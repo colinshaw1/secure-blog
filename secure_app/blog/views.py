@@ -9,6 +9,7 @@ class BlogView(ListView):
     # calls the Post model 
     model = Post
     template_name = 'homepage.html'
+    ordering = ['-created_on']
     
 # view to view a blog post details
 class DetailsPost(DeleteView):
