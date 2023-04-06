@@ -23,16 +23,22 @@ Blog by: {{ post.blogger }} -
 <h2>Comments</h2>
 {% if not post.comment.all %}
     No comments left yet!!
-    <a href="" class="btn btn-primary">Add a Comment</a>
+    <a href="{% url 'comment' post.pk  %}" class="btn btn-primary">Add a Comment</a>
 {% else %}
-<a href="" class="btn btn-primary">Add a Comment</a>
+
     {% for comment in post.comment.all %}
-        {{ comments.name }} - 
-        {{ comments.created_on }}
+    <br>
+        {{ comment.name }} - 
+        {{ comment.created_on }}
         <br>
-        {{comments.body }}
+        {{comment.body }}
+        <hr>
+
     {% endfor %}
+    <br>
+    <a href="{% url 'comment' post.pk  %}" class="btn btn-primary">Add a Comment</a> 
 {% endif %}
+
 <hr>
 <br>
 <a href="{% url 'home' %}" class="btn btn-primary">Retrun to Homepage</a>
