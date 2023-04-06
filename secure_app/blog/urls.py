@@ -14,5 +14,5 @@ urlpatterns = [
     # add delete post url
     path('blog/<int:pk>/delete', DeletePost.as_view(), name="delete"),
     # add like post url
-    path('like/<int:pk>', LikePost.as_view(), name="Like"),
+    path('like/<int:pk>', LikePost, name="like"),
 ]
