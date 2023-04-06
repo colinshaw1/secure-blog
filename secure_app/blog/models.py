@@ -9,6 +9,7 @@ class Post(models.Model):
     blogger = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
     created_on = models.DateField(auto_now_add=True)
+    liked = models.ManyToManyField(User, related_name='blog')
     # defining delf string to return the 
     # title of the blog and blooger name
     def __str__(self):

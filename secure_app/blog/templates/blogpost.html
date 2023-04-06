@@ -20,5 +20,9 @@ Blog by: {{ post.blogger }} -
     {% endif %}
 {% endif %}
 <br><hr>
+<form action="{% url 'like' post.pk %}" method="POST">
+    {% csrf_token %}
+    <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-primary">Like</button>
+</form>
 <a href="{% url 'home' %}" class="btn btn-primary">Retrun to Homepage</a>
 {% endblock %}
