@@ -3,14 +3,14 @@
 {% block content %}
 
 
-<h1>Add a Blog Post</h1>
+<h1>Edit your Blog Post</h1>
 <div class="form_group">
     <form method="POST">
         <!-- cross site request forgery token. stops hackers stealing the form info -->
         {% csrf_token%}
         <!-- django form system to render a built in form -->
         {{ form.as_p}}
-        <button class="btn btn-primary">Post</button>
+        <button class="btn btn-primary">Edit blog post</button>
     </form>
 </div>
 <br>
