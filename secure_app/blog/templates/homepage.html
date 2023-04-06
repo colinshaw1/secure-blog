@@ -9,11 +9,15 @@
 <ul>
     <li><!-- links the post title to the view and bring the user to the post -->
     <a href="{% url 'blogpost' post.pk %}"> 
-    {{ post.title}}</a>
-    {{ post.blogger}}  
-    {{ post.body}}
+    {{ post.title}}</a> -
+    {{ post.blogger}}  -
+    {{ post.created_on }} 
+    <br><br>
+    <p>{{ post.body}}</p>
+    <br>
     <a href="{% url 'edit' post.pk %}" class="btn btn-secondary">Edit Post</a>
     <a href="{% url 'delete' post.pk %}" class="btn btn-secondary">Delete Post</a></li>
+    <hr>
 </ul>
 <!-- ending the for loop -->
 {% endfor %}
