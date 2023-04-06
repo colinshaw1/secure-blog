@@ -8,9 +8,11 @@
 {% for post in object_list %}
 <ul>
     <li><!-- links the post title to the view and bring the user to the post -->
-    <a href="{% url 'blogpost' post.pk %}">{{ post.title}}</a>
-    {{ post.blogger}}
-    {{ post.body}}</li>
+    <a href="{% url 'blogpost' post.pk %}"> 
+    {{ post.title}}</a>
+    {{ post.blogger}}  
+    {{ post.body}}
+    <a href="{% url 'edit' post.pk %}">Edit Post</a></li>
 </ul>
 <!-- ending the for loop -->
 {% endfor %}

@@ -15,4 +15,4 @@ class Post(models.Model):
 
     # add absoulte url function so that post can return to the blogpost page
     def get_absolute_url(self):
-        return reverse('home', args=(str(self.id)))
+        return reverse('blogpost', args=(str(self.id)))
