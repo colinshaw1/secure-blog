@@ -21,8 +21,10 @@ Blog by: {{ post.blogger }} -
 {% endif %}
 <br><hr>
 <h2>Comments</h2>
+{% if user.is_authenticated %}
 {% if not post.comment.all %}
     No comments left yet!!
+    <br><br>
     <a href="{% url 'comment' post.pk  %}" class="btn btn-primary">Add a Comment</a>
 {% else %}
 
@@ -37,6 +39,7 @@ Blog by: {{ post.blogger }} -
     {% endfor %}
     <br>
     <a href="{% url 'comment' post.pk  %}" class="btn btn-primary">Add a Comment</a> 
+{% endif %}
 {% endif %}
 
 <hr>
