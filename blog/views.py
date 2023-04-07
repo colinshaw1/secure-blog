@@ -34,7 +34,6 @@ class AddBlog(CreateView):
     form_class = PostForm
     template_name = 'add_blog.html'
 
-
 # class to edit a blog
 class EditBlog(UpdateView):
     model = Post
