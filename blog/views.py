@@ -40,7 +40,6 @@ class EditBlog(UpdateView):
     template_name = "update_blog.html"
     fields = ['title', 'slug', 'body']
 
-
 # class to delete blog posts
 class DeletePost(DeleteView):
     model = Post
