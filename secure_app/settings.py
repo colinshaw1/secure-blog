@@ -28,11 +28,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", cast=bool)
 
-ALLOWED_HOSTS = ['https://secure-blog.herokuapp.com/']
-if development:
-    ALLOWED_HOSTS = ['localhost']
-else:
-    ALLOWED_HOSTS = ['https://secure-blog.herokuapp.com/']
+ALLOWED_HOSTS = ['secure-blog.herokuapp.com']
+
 
 # Application definition
 
