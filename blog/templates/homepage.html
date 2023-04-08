@@ -16,13 +16,10 @@
     <br><br>
     <p>{{ post.body|slice:":100"}}</p>
     <br>
-    {% if user.is_authenticated %}
-        <!-- only the blogger who created a page can edit a post -->
-        {% if user.id == post.blogger.id %}
+
             <a href="{% url 'edit' post.pk %}" class="btn btn-secondary">Edit Post</a>
             <a href="{% url 'delete' post.pk %}" class="btn btn-secondary">Delete Post</a></li>
-        {% endif %}
-    {% endif %}
+
     <hr>
 </ul>
 <!-- ending the for loop -->
