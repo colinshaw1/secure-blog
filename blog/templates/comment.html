@@ -2,20 +2,15 @@
 <!--  add embedded Django for what is rendered on each page of the blog -->
 {% block content %}
 
-{% if user.is_authenticated %}
     <h1>Add a Comment</h1>
     <div class="form_group">
         <form method="POST">
             <!-- cross site request forgery token. stops hackers stealing the form info -->
-            {% csrf_token%}
             <!-- django form system to render a built in form -->
             {{ form.as_p}}
             <button class="btn btn-primary">Add a Comment</button>
         </form>
     </div>
     <br>
-{% else %}
-    <h1>You need to register for an account to Add a Comment</h1>
-{% endif %}
 <a href="{% url 'home' %}" class="btn btn-primary">Retrun to Homepage</a>
 {% endblock %}
