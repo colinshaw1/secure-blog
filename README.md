@@ -10,17 +10,33 @@ Prerequisites
 pip install -r requirements.txt
 
 
-git branch -m main secure
-git fetch origin
-git branch -u origin/secure secure
-git remote set-head origin -a
 
 
 
 Branches
+
+
 Secure
-The secure branch is the code implemented in a secure manner.
+--
+git branch -m main secure
+
+git fetch origin
+
+git branch -u origin/secure secure
+
+git remote set-head origin -a
+
+The secure branch is the code implemented in a secure manner with authentication, csrf tokens and form control to stop XXS.
 
 Insecure
-The insecure branch is the code developed in an insecure manner. 
+--
+git branch -m main insecure
+
+git fetch origin
+
+git branch -u origin/insecure insecure
+
+git remote set-head origin -a
+
+The insecure branch is the code developed in an insecure manner. There is no csrf tokens, no authentiction for the application so anyone can end blog posts etc.  
 
